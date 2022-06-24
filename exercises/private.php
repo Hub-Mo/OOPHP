@@ -31,6 +31,22 @@ class Beverage{
         return "this beverage is a $this->name , costs $this->price euro and has a $this->color color, usually served $this->temperature";
     }
 
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getColor(): string
+    {
+        return $this->color;
+    }
+
 }
 
 class Beer extends Beverage {
@@ -40,6 +56,8 @@ class Beer extends Beverage {
     public function __construct(string $name, string $color, float $price, float $alcoholPercentage){
         parent::__construct( $name,  $color,  $price);
         $this->alcoholPercentage = $alcoholPercentage;
+        $this->name = $name;
+        $this->color = $color;
     }
 
     public function getAlcoholPercentage() : float {
