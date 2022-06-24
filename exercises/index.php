@@ -16,6 +16,8 @@ TODO: Print the temperature on the screen.
 USE TYPEHINTING EVERYWHERE!
 */
 
+
+// to switch trough the different exercises with buttons
 if(isset($_GET['page'])){
     switch($_GET['page']){
         case 'classes' :
@@ -42,7 +44,7 @@ if(isset($_GET['page'])){
     }
 }
 
-
+// the buttons
 ?>
 <form action="index.php" method="get">
     <button type="page" class="btn" name="page" value="classes"> classes </button>

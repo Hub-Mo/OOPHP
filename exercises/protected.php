@@ -11,17 +11,21 @@ USE TYPEHINTING EVERYWHERE!
 
 class Beverage{
 
+    // all the properties are protected. xwich means they can only be used inside the class or childs from that class
     protected string $name;
     protected string $color;
     protected float $price;
     protected string $temperature;
 
+    // public constructor to create the object
     public function __construct(string $name, string $color, float $price){
         $this->name = $name;
         $this->color = $color;
         $this->price = $price;
         $this->temperature = 'cold';
     }
+
+    // getters
     public function getInfo() : string{
         return "this beverage is a $this->name , costs $this->price euro and has a $this->color color, usually served $this->temperature";
     }
@@ -44,6 +48,7 @@ class Beverage{
 
 }
 
+// extending Beer class from Beverage
 class Beer extends Beverage {
 
     protected float $alcoholPercentage;

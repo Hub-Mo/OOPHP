@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+
+//class
 class Beverage{
 
     //properties
@@ -16,14 +18,15 @@ class Beverage{
         $this->price = $price;
         $this->temperature = 'cold';
     }
-    // method
+    // method/getter, this gets the properties and puts them in the string and the method return that string.
     public function getInfo() : string{
         return "this beverage is a $this->name , costs $this->price euro and has a $this->color color.";
     }
 
 }
-
+// instantiating a class
 $cola = new Beverage('Cola', 'black', 2);
+// calling the getter thats inside the cola object wich we made from the beverage class.
 echo $cola->getInfo();
 
 
