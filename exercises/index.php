@@ -50,7 +50,7 @@ if(isset($_GET['page'])){
     <button type="page" class="btn" name="page" value="private"> private </button>
     <button type="page" class="btn" name="page" value="public"> public </button>
     <button type="page" class="btn" name="page" value="const"> const </button>
-    <button type="page" class="btn" name="page" value="break"> break </button>
+    <button type="page" class="btn" name="page" value="protected"> protected </button>
     <button type="page" class="btn" name="page" value="static"> static </button>
 
 </form>
