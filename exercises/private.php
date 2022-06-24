@@ -15,18 +15,21 @@ USE TYPEHINTING EVERYWHERE!
 
 
 class Beverage{
-
+ // changed all the properties to private
     private string $name;
     private string $color;
     private float $price;
     private string $temperature;
 
+    // construvctor
     public function __construct(string $name, string $color, float $price){
         $this->name = $name;
         $this->color = $color;
         $this->price = $price;
         $this->temperature = 'cold';
     }
+
+    // getters
     public function getInfo() : string{
         return "this beverage is a $this->name , costs $this->price euro and has a $this->color color, usually served $this->temperature";
     }

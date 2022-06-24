@@ -24,10 +24,15 @@ class Beverage{
         $this->price = $price;
         $this->temperature = 'cold';
     }
+
+    // added this if statement first to the constructor. then changed it back and put it in a statement/function.
+    // in the object you can define a new price. if its higher then the current price it return "nice try". else it gives you the string with the new price.
     public function changePrice(float $newPrice){
-        if ($newPrice > 2){
+        if ($newPrice > $this->price){
             $this->price = $newPrice;
-            return "this beverage is a $this->name, it costs $this->price and has a $this->color color.";
+            return "this beverage is a $this->name, it costs $this->price euros and has a $this->color color.";
+        }elseif($newPrice === $this->price){
+            return "the price is already set to $this->price euros";
         }
             return "nice try";
     }
