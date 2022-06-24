@@ -21,7 +21,7 @@ if(isset($_GET['page'])){
         case 'classes' :
             require 'classes.php';
             break;
-        case 'extending' :
+        case 'extended' :
             require 'extended.php';
             break;
         case 'private':
@@ -41,6 +41,7 @@ if(isset($_GET['page'])){
             break;
     }
 }
+
 
 ?>
 <form action="index.php" method="get">
